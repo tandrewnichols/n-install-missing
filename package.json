@@ -37,7 +37,9 @@
   "dependencies": {
     "async": "^1.5.2",
     "chalk": "^1.1.1",
+    "is-io-version": "^1.0.0",
     "lodash": "^4.0.0",
+    "n-installed": "^1.0.0",
     "n-wrap": "^1.0.1"
   },
   "devDependencies": {
