@@ -2,7 +2,7 @@
 
 # n-install-missing
 
-Given a list of node versions, install any not currently installed using n
+Given a list of node versions, install any not currently installed using n.
 
 ## Installation
 
@@ -10,11 +10,23 @@ Given a list of node versions, install any not currently installed using n
 
 ## Summary
 
-## Usage
+`n-install-missing` exports a function that takes an array of node versions and, using [n](https://github.com/tj/n), installs any that aren't currently installed.
 
+```js
+var install = require('n-install-missing');
+install(['4.0.0', '5.0.0'], function(err) {
 
+});
+```
 
-### Example
+By default, there is logging when installing each version, but you can turn this off by passing the `quiet` option.
+
+```js
+var install = require('n-install-missing');
+install(['4.0.0', '5.0.0'], { quiet: true }, function(err) {
+
+});
+```
 
 ## Contributing
 
