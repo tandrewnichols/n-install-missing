@@ -20,7 +20,7 @@ describe 'n-install-missing', ->
   Given -> sinon.stub console, 'log'
 
   describe 'no options', ->
-    Given -> @installed.callsArgWith 0, null, ['0.12.9']
+    Given -> @installed.callsArgWith 0, null, node: ['0.12.9']
     Given -> @n.withArgs('0.10.3', download: true, sinon.match.func).callsArgWith 2, null
     Given -> @n.io.withArgs('1.2.3', download: true, sinon.match.func).callsArgWith 2, null
     Given -> @cb = sinon.stub()
@@ -31,7 +31,7 @@ describe 'n-install-missing', ->
       console.log.calledWith('Installing', 'io', 'version', chalk.cyan('1.2.3')).should.be.true()
 
   describe 'options', ->
-    Given -> @installed.callsArgWith 0, null, ['0.12.9']
+    Given -> @installed.callsArgWith 0, null, node: ['0.12.9']
     Given -> @n.withArgs('0.10.3', download: true, sinon.match.func).callsArgWith 2, null
     Given -> @n.io.withArgs('1.2.3', download: true, sinon.match.func).callsArgWith 2, null
     Given -> @cb = sinon.stub()
